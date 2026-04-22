@@ -4,13 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // return view('welcome');
-    $jsonString = `[<?php
-
-use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    // return view('welcome');
-    $jsonString = '{
+    $jsonString = `[{
   "success": true,
   "code": 200,
   "msg": "ok",
@@ -10465,12 +10459,7 @@ Route::get('/', function () {
       }
     ]
   }
-}'; // aap ka JSON
-
-return $array = json_decode($jsonString, true);
-    
-});
-]`; // aap ka JSON
+}]`; // aap ka JSON
 
 return $array = json_decode($jsonString, true);
     

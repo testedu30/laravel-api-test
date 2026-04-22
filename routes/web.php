@@ -4,6 +4,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // return view('welcome');
+    $jsonString = `[<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    // return view('welcome');
     $jsonString = '{
   "success": true,
   "code": 200,
@@ -10460,6 +10466,11 @@ Route::get('/', function () {
     ]
   }
 }'; // aap ka JSON
+
+return $array = json_decode($jsonString, true);
+    
+});
+]`; // aap ka JSON
 
 return $array = json_decode($jsonString, true);
     

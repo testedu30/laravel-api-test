@@ -4,13 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // return view('welcome');
-    $jsonString = "[{
-  "success": true,
-  "code": 200,
-  "msg": "ok",
-  "data": {
-    "is_connected": 1,
-     "words": [
+    $jsonString = "[
       {
         "id": 3477,
         "scrapUrl": "https://megabatteries.com",
@@ -23,9 +17,7 @@ Route::get('/', function () {
         "english": "Toggle menu",
         "translateTo": "Menu à bascule"
       }
-      ]
-  }
-}]"; // aap ka JSON
+      ]"; // aap ka JSON
 
 return response()->json(json_decode($jsonString, true));
     

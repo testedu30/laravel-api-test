@@ -17,7 +17,7 @@ Route::get('/', function () {
         "english": "Toggle menu",
         "translateTo": "Menu à bascule"
       }
-      ]"; // aap ka JSON
+      ]"; // aap ka JSONs
 
 return response()->json(json_decode($jsonString, true));
     

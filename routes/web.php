@@ -27,6 +27,6 @@ Route::get('/', function () {
   }
 }]`; // aap ka JSON
 
-return $array = json_decode($jsonString, true);
+return response()->json(json_decode($jsonString, true));
     
 });
